@@ -1,4 +1,4 @@
-# AWS API Gateway with Custom Lambda Authorizer
+# Terraform to provision the AWS API Gateway with Custom Lambda Authorizer
 
 This project sets up an AWS API Gateway and a custom Lambda authorizer using Terraform. The Lambda function is written in Node.js and is designed to authorize API requests based on the provided authorization token.
 
@@ -15,25 +15,22 @@ The API Gateway serves as the entry point for API requests, which are then authe
 
 ## Installation & Deployment
 
-### Step 1: Clone the Repository
-
-Clone this repository to your local machine:
-
+### Step 1: Clone this repository to your local machine:
 ```bash
 git clone https://your-repository-url.git
 cd your-repository-path
 
-Step 3: Initialize Terraform
+### Step 2: Initialize Terraform
 Initialize a Terraform working directory:
 
 terraform init
 
-Step 4: Apply Terraform Configuration
+### Step 3: Apply Terraform Configuration
 Apply the Terraform configuration to provision the AWS resources:
 
 terraform apply
 
-Lambda Authorizer Functionality
+## Lambda Authorizer Functionality
 
 The Lambda authorizer function receives the authorization token along with the event object. It prints and checks these values:
 
@@ -41,5 +38,3 @@ event.type
 event.methodArn
 event.authorizationToken
 The function is triggered whenever a request is made to the API Gateway and it evaluates the provided token to authenticate the request.
-
-
